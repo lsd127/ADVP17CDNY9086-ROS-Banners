@@ -185,6 +185,11 @@ App_banner.fn.step1 = function() {
         disclaimer = $('.disclaimer'),
         text2 = $('.text2'),
         pills = $('.pills'),
+        text3 = $('.text3'),
+        logo = $('.logo'),
+        link = $('.link'),
+        disclaimer2 = $('.disclaimer2'),
+        disclaimer3 = $('.disclaimer3'),
         scrollBar,
         isi1 = $('#isi'),
         isiMain = $('#isi-main'),
@@ -212,14 +217,22 @@ App_banner.fn.step1 = function() {
 
     .addLabel('frame3')
         .to(text1, 1.5, { x: -375, ease: Power1.easeOut })
-        .to(text1, 1, { opacity: 0 }, 'frame3+=2')
-        .to(disclaimer, 1, { x: -100, ease: Power1.easeOut }, 'frame3+=1')
-        .to(disclaimer, 0.5, { opacity: 0 })
+        .to(text1, 1.5, { opacity: 0 }, 'frame3+=2')
+        .to(disclaimer, 1.5, { x: -100, ease: Power1.easeOut }, 'frame3')
+        .to(disclaimer, 1.5, { opacity: 0 }, 'frame3+=2')
 
     .addLabel('frame4')
         .fromTo(text2, 1.5, { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1 })
         .to(text2, 1.5, { opacity: 0 })
         .to(pills, 1, { x: -300, ease: Power1.easeOut }, 'frame4')
+
+    .addLabel('frame5')
+        .fromTo(text3, 1.5, { scale: 0.1, opacity: 0 }, { scale: 1, opacity: 1 })
+        .to(pills, 1, { x: -350, ease: Power1.easeOut }, 'frame5')
+        .to(logo, 1, { x: -400, ease: Power1.easeOut }, 'frame5')
+        .to(link, 1, { x: -300, ease: Power1.easeOut }, 'frame5')
+        .to(disclaimer2, 1, { x: -200, ease: Power1.easeOut }, 'frame5')
+        .to(disclaimer3, 1, { x: -200, ease: Power1.easeOut }, 'frame5')
 
 
 
